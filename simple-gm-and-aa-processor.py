@@ -63,7 +63,7 @@ def AAtomRNA(AA, aminoacids):
         aa=AA[i]+AA[i+1]+AA[i+2]
         for key in aminoacids.keys():
             if key==aa:
-                randInt=rnd.randint()
+                randInt=rnd.randint(0, len(aminoacids[key])-1)
                 codon=aminoacids[key][randInt]
                 mRNASeq+=codon
             else:
